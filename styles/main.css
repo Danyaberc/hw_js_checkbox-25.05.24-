@@ -56,6 +56,15 @@ span{
     gap:15px;
 }
 .message__error{
-    font-size:24px;
-    color:rgb(113, 6, 6);
+    font-size:30px;
+    color:rgba(174, 6, 6, 0.771);
+}
+
+.message__done{
+    font-size:32px;
+    color:rgba(14, 180, 61, 0.497);
+}
+.usertext{
+    font-size:26px;
+    color:rgb(114, 216, 156)
 }
