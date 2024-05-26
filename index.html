@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content__soft">
+            <form class="main__form">
+                <h1>Вітаємо в застосунку Резерв +</h1>
+                <h2>Нижче приведена форма для
+                    заповнення ваших поточних данних
+                </h2>
+                <label for = "form__input--name ">
+                    <input type = "text" name = "firstName" class = "username inp" placeholder = "Введіть ім'я">
+                </label>
+                <label for = "form__input--surname">
+                    <input type = "text" name = "surname" class = "surusername inp" placeholder = "Введіть прізвище">
+                </label>
+                <label for = "form__input--month">
+                    <input type = "date" name = "datebirth" class = "birthday inp" placeholder = "Ваша дата народження">
+                </label>
+                <label for = "form__input--adress">
+                    <input type = "text" name = "adress" class = "location inp" placeholder = "Ваше місце проживання">
+                </label>
+                <!-- <label for = "form__input--gender">
+                    <select class = "gender--select inp" aria-placeholder="Ваша стать">
+                        <option value = "" disabled selected>Оберіть стать</option>
+                        <option value = "Man">Чоловіча</option>
+                        <option value = "Female">Жіноча</option>
+                        <option value = "Uhilant">Ухилянт</option>
+                    </select>
+                    
+                     <div class="container__gender">
+                        <div class="form__container">
+                        <input type ="checkbox" name = "input__select " class = "select--gen custom__checkbox">
+                        <span>Чоловіча</span>
+                     </div>
+                     <div class="form__container">
+                        <input type ="checkbox" name = "input__select " class = "select--gen custom__checkbox">
+                        <span>Жіноча</span>
+                     </div>
+                     <div class="form__container">
+                        <input type ="checkbox" name = "input__select " class = "select--gen custom__checkbox">
+                        <span>Ухилянт</span>
+                     </div>
+                     </div>
+                </label> -->
+                <label for = "form__input--agree ">
+                    <div class="form__container">
+                        <input type = "checkbox" name ="agree__user" class = "agreesoft custom__checkbox">
+                        <span>Погоджуюсь з тим,що русні пізда</span>
+                    </div>
+                </label>
+                <div class="message__error"></div>
+                <button type ="form__submit" class ="subm inp ">Підтвердити</button>
+                <div class="message__done"></div>
+            </form>
+        </div>
+    </div>
+    <script src = "scripts/main.js"></script>
+</body>
+</html>
