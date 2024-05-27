@@ -6,6 +6,7 @@ let btnSubm = document.querySelector('.subm')
 // Message condition------------------
 let msgEr = document.querySelector('.message__error')
 let msgDone = document.querySelector('.message__done')
+let infoUser = document.querySelector('.info__user')
 // ---------------------------
 
 // INPUTS//-------------------------------
@@ -18,63 +19,44 @@ let onCheckbox = document.querySelector('#agreeuser')
 console.log(onCheckbox.checked)
 //------------------------------------------
 
-
-// let arr= [];
-
-// let inputsArr = [nameUser,surName,dateBirth,adress,checkbox]
-// console.log('inputs',inputsArr)
+let arr= [];
 
 formEl.addEventListener('submit',(ev) =>{
     ev.preventDefault();
     
     const formData = new FormData(ev.target);
     // const info = `${formData.get('firstName')} ${formData.get('surname')} ${formData.get('datebirth')} ${formData.get('adress')} ${formData.get('agree__user')}`;
-    let infoArr = [
-        formData.get('firstName'),
-        formData.get('surname'),
-        formData.get('datebirth'),
-        formData.get('adress'),
-    ];
+    // let infoArr = [
+    //     formData.get('firstName'),
+    //     formData.get('surname'),
+    //     formData.get('datebirth'),
+    //     formData.get('adress'),
+    // ];
 
     let checkDone = true;
 
-    let checkInp = infoArr.forEach(input => {
+    let checkInp = formData.forEach(input => {
         if(input === null || input.trim() === "" || input === 0 || onCheckbox.checked === false){
             checkDone = false;
             msgEr.innerHTML = 'Онови дані ухилянт'
             msgDone.innerHTML = ''
+            infoUser.innerHTML = '';
         }else if(checkDone && onCheckbox.checked === true){
             msgDone.innerHTML = 'Дані оновлено'
-            msgEr.innerHTML = ''
+            msgEr.innerHTML = '';
+
+            arr.push(input)
+            infoUser.innerHTML = `Ваші поточні данні такі: ${arr}`
+            console.log(arr)
+            // console.log(infoArr.length)
             console.log(onCheckbox.checked)
         }
+        
+       
     })
 
-
-    // let newInfo = info.split('')
-    // console.log(newInfo)
-
-    // let newInfoArr = newInfo.map(input => input.value);
-    // console.log(newInfoArr)
-
-
-    // if(newInfoArr.innerHTML === "" || 0 || null){
-    //     msgEr.innerHTML = 'Онови дані ухилянт'
-    // }else{
-    //     msgDone.innerHTML = 'Дані оновлено'
-    // }
-    
-    // info.forEach(input =>{
-    //     if(input === ""){
-    //         msgEr.innerHTML = 'Онови дані ухилянт'
-    //     }else{
-    //         msgDone.innerHTML = 'Дані оновлено'
-    //     }
-    // })
-    // msgDone.innerHTML = info;
-
-
 });
+
 
 
 
